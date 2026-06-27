@@ -1,0 +1,22 @@
+# Core dependencies for CPU runs on Windows/Linux.
+# Install with:
+#   python -m pip install -r requirements.txt
+numpy
+pandas
+pyarrow
+scikit-learn
+scipy
+statsmodels
+linearmodels
+matplotlib
+seaborn
+
+# Optional GPU random forest:
+# RAPIDS/cuML is not included here because it is CUDA/Linux-specific and is
+# usually installed through conda/mamba on the target server.
+# On the Linux V100 server with CUDA 12.2, create a separate environment:
+#   conda create -n ssc-rapids -c rapidsai -c conda-forge -c nvidia \
+#       cuml cudf python=3.12 cuda-version=12.2
+#   conda activate ssc-rapids
+#   python -m pip install -r requirements.txt
+#   SSC_MODELS=enet,rf_gpu python rolling_main.py

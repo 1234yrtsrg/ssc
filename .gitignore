@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+logs/
+preds/
+result_enet/
+result_rf/
+result_rf_gpu/
+*.zip
+*.parquet
