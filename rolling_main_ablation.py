@@ -85,15 +85,19 @@ B_EXCLUSIVE_FEATURES = ["ocf_at", "be_me", "netis_at", "eqnetis_at", "niq_at", "
 A_TOP10_FEATURES = ["ocfq_saleq_std", "ret_12_1", "f_score", "capex_abn", "cop_at",
                      "z_score", "ebitda_mev", "ret_60_12", "taccruals_at", "aliq_at"]
 
-# 基准组（版本0）自动保存的超参数日志路径，用于读取并强行锁定超参数
-
-BASELINE_LOG_PATH = LOG_OUTPUT_DIR / f"training_log_{MODEL}_yearly.csv"
-
 # 消融实验输出目录。基准日志仍从 LOG_OUTPUT_DIR 读取，便于复用主实验结果；
 # 消融脚本自己的预测和日志统一写入这个独立文件夹。
 ABLATION_OUTPUT_DIR = Path(os.environ.get("SSC_ABLATION_OUTPUT_DIR", PROJECT_ROOT / "result_ablation_rf"))
 ABLATION_PRED_OUTPUT_DIR = ABLATION_OUTPUT_DIR / "preds"
 ABLATION_LOG_OUTPUT_DIR = ABLATION_OUTPUT_DIR / "logs"
+
+# 基准组（版本0）自动保存的超参数日志路径，用于读取并强行锁定超参数。
+# 默认优先读主实验 logs/，如果不存在，再读本脚本独立输出目录下的 v0 日志。
+BASELINE_LOG_CANDIDATES = [
+    Path(os.environ["SSC_BASELINE_LOG_PATH"]) if os.environ.get("SSC_BASELINE_LOG_PATH") else None,
+    LOG_OUTPUT_DIR / f"training_log_{MODEL}_yearly.csv",
+    ABLATION_LOG_OUTPUT_DIR / f"training_log_{MODEL}_yearly.csv",
+]
 
 # ============================================================
 
@@ -217,6 +221,54 @@ def fit_locked_rf(X_train, y_train, X_val, y_val, selected_params):
 
     return model, locked_params
 
+def get_baseline_log_path():
+
+    """Find the RF baseline log used to lock ablation hyperparameters."""
+
+    for path in BASELINE_LOG_CANDIDATES:
+
+        if path is not None and path.exists():
+
+            return path
+
+    searched = [str(path) for path in BASELINE_LOG_CANDIDATES if path is not None]
+
+    raise FileNotFoundError(
+
+        "未找到基准RF日志。请先运行 ABLATION_VERSION=0 生成基准日志，或用 "
+
+        "SSC_BASELINE_LOG_PATH 指定 training_log_rf_yearly.csv。已查找: "
+
+        + "; ".join(searched)
+
+    )
+
+def print_missing_summary(df, cols, title, top_n=12):
+
+    """Print top missing-count columns for quick data diagnosis."""
+
+    missing = df[cols].isna().sum().sort_values(ascending=False)
+
+    missing = missing[missing > 0]
+
+    if missing.empty:
+
+        return
+
+    print(title)
+
+    n_rows = len(df)
+
+    for col, count in missing.head(top_n).items():
+
+        pct = 100.0 * float(count) / float(n_rows)
+
+        print(f"  {col}: {int(count)} ({pct:.2f}%)")
+
+    if len(missing) > top_n:
+
+        print(f"  ... 另有 {len(missing) - top_n} 个特征存在缺失")
+
 def main():
 
     print(f"====================================================")
@@ -319,14 +371,24 @@ def main():
 
         df[features_to_replace] = df_win_sub
 
-        # rank前的原始特征允许存在NaN；后面的统一缺失值防线会填0。
+        # rank前的原始特征允许存在NaN；先按月中位数补缺。
         # 这里仅提示数量，不再把原始缺失误判为行对齐失败。
 
         nan_after = df[features_to_replace].isna().sum().sum()
 
         if nan_after > 0:
 
-            print(f" 警告：替换后的原始Winsorize特征中有 {nan_after} 个NaN，将在后续统一填充为0.0。")
+            print(f" 警告：替换后的原始Winsorize特征中有 {nan_after} 个NaN，将先按月中位数补缺。")
+
+            print_missing_summary(df, features_to_replace, " 原始Winsorize替换列缺失最多的特征:")
+
+            print(" 正在对原始Winsorize替换列按月中位数补缺；若某月整列缺失，后续再统一填0.0。")
+
+            df[features_to_replace] = df.groupby(DATE_COL)[features_to_replace].transform(
+
+                lambda x: x.fillna(x.median())
+
+            )
 
         df = df.reset_index()
 
@@ -360,6 +422,8 @@ def main():
 
         print(f"警告：检测到缺失值 {total_na_before} 个，进行安全填充(0.0)")
 
+        print_missing_summary(df, firmcols, "全量特征缺失最多的列:")
+
         df[firmcols] = df[firmcols].fillna(0.0)
 
     df = df.dropna(subset=[RET_COL]).copy()
@@ -380,19 +444,11 @@ def main():
 
     if ABLATION_VERSION in [1, 2]:
 
-        print(f"正在载入基准超参数日志用于参数锁死: {BASELINE_LOG_PATH}")
+        baseline_log_path = get_baseline_log_path()
 
-        if not BASELINE_LOG_PATH.exists():
+        print(f"正在载入基准超参数日志用于参数锁死: {baseline_log_path}")
 
-            raise FileNotFoundError(
-
-                f"未找到基准日志 {BASELINE_LOG_PATH}。"
-
-                f"请确认人员A/D已经跑完了版本0并生成了此日志。"
-
-            )
-
-        baseline_log_df = pd.read_csv(BASELINE_LOG_PATH)
+        baseline_log_df = pd.read_csv(baseline_log_path)
 
     # 滚动窗口预测循环
 
