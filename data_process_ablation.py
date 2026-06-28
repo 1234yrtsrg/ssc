@@ -12,8 +12,6 @@ This script creates the cleaned stock-level panel used by all prediction models.
 It only handles data cleaning and characteristic preprocessing. It does not train
 any machine learning model.
 """
-import os
-os.chdir("/Users/howardhua-pc/Desktop/empirical-asset-pring-ml/scripts")
 from config_global import *
 from pathlib import Path
 import numpy as np
