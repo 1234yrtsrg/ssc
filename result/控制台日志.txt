@@ -1,0 +1,616 @@
+(/tmp/conda_env/test) root@10118ad6437d4a8b8d75f306085ad8100000C6:/storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc# SSC_MODELS=enet,rf_gpu python rolling_main.py
+Models to run: ['enet', 'rf_gpu']
+Loading cleaned panel: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/us_panel_cleaned.parquet
+Using 65 firm characteristics as predictors.
+Total missing characteristic values before final safety fill: 0
+First test year = 1995
+
+======================================================================
+Selected model: enet
+======================================================================
+
+=== Test year 1995 ===
+  Train: 1965-1984
+  Val:   1985-1994
+  Test:  1995
+  Elastic Net best alpha = 0.0316228, best l1_ratio = 0.1, validation MSE = 219.164624
+  Saved yearly predictions to: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/preds/pred_enet_by_year/pred_enet_1995.parquet
+  Updated partial training log: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/logs/training_log_enet_partial.csv
+
+=== Test year 1996 ===
+  Train: 1966-1985
+  Val:   1986-1995
+  Test:  1996
+  Elastic Net best alpha = 0.0316228, best l1_ratio = 0.1, validation MSE = 224.378240
+  Saved yearly predictions to: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/preds/pred_enet_by_year/pred_enet_1996.parquet
+  Updated partial training log: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/logs/training_log_enet_partial.csv
+
+=== Test year 1997 ===
+  Train: 1967-1986
+  Val:   1987-1996
+  Test:  1997
+  Elastic Net best alpha = 0.0316228, best l1_ratio = 0.1, validation MSE = 230.165091
+  Saved yearly predictions to: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/preds/pred_enet_by_year/pred_enet_1997.parquet
+  Updated partial training log: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/logs/training_log_enet_partial.csv
+
+=== Test year 1998 ===
+  Train: 1968-1987
+  Val:   1988-1997
+  Test:  1998
+  Elastic Net best alpha = 0.0316228, best l1_ratio = 0.1, validation MSE = 227.831465
+  Saved yearly predictions to: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/preds/pred_enet_by_year/pred_enet_1998.parquet
+  Updated partial training log: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/logs/training_log_enet_partial.csv
+
+=== Test year 1999 ===
+  Train: 1969-1988
+  Val:   1989-1998
+  Test:  1999
+  Elastic Net best alpha = 0.0316228, best l1_ratio = 0.1, validation MSE = 255.587477
+  Saved yearly predictions to: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/preds/pred_enet_by_year/pred_enet_1999.parquet
+  Updated partial training log: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/logs/training_log_enet_partial.csv
+
+=== Test year 2000 ===
+  Train: 1970-1989
+  Val:   1990-1999
+  Test:  2000
+  Elastic Net best alpha = 0.01, best l1_ratio = 0.9, validation MSE = 292.741153
+  Saved yearly predictions to: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/preds/pred_enet_by_year/pred_enet_2000.parquet
+  Updated partial training log: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/logs/training_log_enet_partial.csv
+
+=== Test year 2001 ===
+  Train: 1971-1990
+  Val:   1991-2000
+  Test:  2001
+  Elastic Net best alpha = 0.01, best l1_ratio = 0.75, validation MSE = 338.413358
+  Saved yearly predictions to: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/preds/pred_enet_by_year/pred_enet_2001.parquet
+  Updated partial training log: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/logs/training_log_enet_partial.csv
+
+=== Test year 2002 ===
+  Train: 1972-1991
+  Val:   1992-2001
+  Test:  2002
+  Elastic Net best alpha = 0.00316228, best l1_ratio = 0.9, validation MSE = 348.973175
+  Saved yearly predictions to: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/preds/pred_enet_by_year/pred_enet_2002.parquet
+  Updated partial training log: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/logs/training_log_enet_partial.csv
+
+=== Test year 2003 ===
+  Train: 1973-1992
+  Val:   1993-2002
+  Test:  2003
+  Elastic Net best alpha = 0.00316228, best l1_ratio = 0.75, validation MSE = 356.025796
+  Saved yearly predictions to: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/preds/pred_enet_by_year/pred_enet_2003.parquet
+  Updated partial training log: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/logs/training_log_enet_partial.csv
+
+=== Test year 2004 ===
+  Train: 1974-1993
+  Val:   1994-2003
+  Test:  2004
+  Elastic Net best alpha = 0.000316228, best l1_ratio = 0.1, validation MSE = 364.331041
+  Saved yearly predictions to: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/preds/pred_enet_by_year/pred_enet_2004.parquet
+  Updated partial training log: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/logs/training_log_enet_partial.csv
+
+=== Test year 2005 ===
+  Train: 1975-1994
+  Val:   1995-2004
+  Test:  2005
+  Elastic Net best alpha = 0.001, best l1_ratio = 0.9, validation MSE = 370.284790
+  Saved yearly predictions to: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/preds/pred_enet_by_year/pred_enet_2005.parquet
+  Updated partial training log: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/logs/training_log_enet_partial.csv
+
+=== Test year 2006 ===
+  Train: 1976-1995
+  Val:   1996-2005
+  Test:  2006
+  Elastic Net best alpha = 0.001, best l1_ratio = 0.9, validation MSE = 370.448435
+  Saved yearly predictions to: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/preds/pred_enet_by_year/pred_enet_2006.parquet
+  Updated partial training log: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/logs/training_log_enet_partial.csv
+
+=== Test year 2007 ===
+  Train: 1977-1996
+  Val:   1997-2006
+  Test:  2007
+  Elastic Net best alpha = 0.001, best l1_ratio = 0.9, validation MSE = 365.240776
+  Saved yearly predictions to: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/preds/pred_enet_by_year/pred_enet_2007.parquet
+  Updated partial training log: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/logs/training_log_enet_partial.csv
+
+=== Test year 2008 ===
+  Train: 1978-1997
+  Val:   1998-2007
+  Test:  2008
+  Elastic Net best alpha = 0.00316228, best l1_ratio = 0.9, validation MSE = 363.856969
+  Saved yearly predictions to: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/preds/pred_enet_by_year/pred_enet_2008.parquet
+  Updated partial training log: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/logs/training_log_enet_partial.csv
+
+=== Test year 2009 ===
+  Train: 1979-1998
+  Val:   1999-2008
+  Test:  2009
+  Elastic Net best alpha = 1e-05, best l1_ratio = 0.9, validation MSE = 355.729284
+  Saved yearly predictions to: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/preds/pred_enet_by_year/pred_enet_2009.parquet
+  Updated partial training log: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/logs/training_log_enet_partial.csv
+
+=== Test year 2010 ===
+  Train: 1980-1999
+  Val:   2000-2009
+  Test:  2010
+  Elastic Net best alpha = 0.01, best l1_ratio = 0.9, validation MSE = 340.275353
+  Saved yearly predictions to: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/preds/pred_enet_by_year/pred_enet_2010.parquet
+  Updated partial training log: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/logs/training_log_enet_partial.csv
+
+=== Test year 2011 ===
+  Train: 1981-2000
+  Val:   2001-2010
+  Test:  2011
+  Elastic Net best alpha = 0.1, best l1_ratio = 0.1, validation MSE = 277.131163
+  Saved yearly predictions to: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/preds/pred_enet_by_year/pred_enet_2011.parquet
+  Updated partial training log: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/logs/training_log_enet_partial.csv
+
+=== Test year 2012 ===
+  Train: 1982-2001
+  Val:   2002-2011
+  Test:  2012
+  Elastic Net best alpha = 0.1, best l1_ratio = 0.75, validation MSE = 252.745942
+  Saved yearly predictions to: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/preds/pred_enet_by_year/pred_enet_2012.parquet
+  Updated partial training log: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/logs/training_log_enet_partial.csv
+
+=== Test year 2013 ===
+  Train: 1983-2002
+  Val:   2003-2012
+  Test:  2013
+  Elastic Net best alpha = 0.1, best l1_ratio = 0.9, validation MSE = 237.776400
+  Saved yearly predictions to: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/preds/pred_enet_by_year/pred_enet_2013.parquet
+  Updated partial training log: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/logs/training_log_enet_partial.csv
+
+=== Test year 2014 ===
+  Train: 1984-2003
+  Val:   2004-2013
+  Test:  2014
+  Elastic Net best alpha = 0.1, best l1_ratio = 0.9, validation MSE = 226.660247
+  Saved yearly predictions to: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/preds/pred_enet_by_year/pred_enet_2014.parquet
+  Updated partial training log: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/logs/training_log_enet_partial.csv
+
+=== Test year 2015 ===
+  Train: 1985-2004
+  Val:   2005-2014
+  Test:  2015
+  Elastic Net best alpha = 0.1, best l1_ratio = 0.9, validation MSE = 224.078547
+  Saved yearly predictions to: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/preds/pred_enet_by_year/pred_enet_2015.parquet
+  Updated partial training log: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/logs/training_log_enet_partial.csv
+
+=== Test year 2016 ===
+  Train: 1986-2005
+  Val:   2006-2015
+  Test:  2016
+  Elastic Net best alpha = 0.1, best l1_ratio = 0.9, validation MSE = 236.172304
+  Saved yearly predictions to: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/preds/pred_enet_by_year/pred_enet_2016.parquet
+  Updated partial training log: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/logs/training_log_enet_partial.csv
+
+=== Test year 2017 ===
+  Train: 1987-2006
+  Val:   2007-2016
+  Test:  2017
+  Elastic Net best alpha = 0.1, best l1_ratio = 0.9, validation MSE = 247.898793
+  Saved yearly predictions to: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/preds/pred_enet_by_year/pred_enet_2017.parquet
+  Updated partial training log: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/logs/training_log_enet_partial.csv
+
+=== Test year 2018 ===
+  Train: 1988-2007
+  Val:   2008-2017
+  Test:  2018
+  Elastic Net best alpha = 0.1, best l1_ratio = 0.9, validation MSE = 252.322614
+  Saved yearly predictions to: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/preds/pred_enet_by_year/pred_enet_2018.parquet
+  Updated partial training log: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/logs/training_log_enet_partial.csv
+
+=== Test year 2019 ===
+  Train: 1989-2008
+  Val:   2009-2018
+  Test:  2019
+  Elastic Net best alpha = 0.1, best l1_ratio = 0.9, validation MSE = 247.137456
+  Saved yearly predictions to: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/preds/pred_enet_by_year/pred_enet_2019.parquet
+  Updated partial training log: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/logs/training_log_enet_partial.csv
+
+=== Test year 2020 ===
+  Train: 1990-2009
+  Val:   2010-2019
+  Test:  2020
+  Elastic Net best alpha = 0.1, best l1_ratio = 0.9, validation MSE = 225.987118
+  Saved yearly predictions to: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/preds/pred_enet_by_year/pred_enet_2020.parquet
+  Updated partial training log: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/logs/training_log_enet_partial.csv
+
+=== Test year 2021 ===
+  Train: 1991-2010
+  Val:   2011-2020
+  Test:  2021
+  Elastic Net best alpha = 0.1, best l1_ratio = 0.9, validation MSE = 287.802360
+  Saved yearly predictions to: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/preds/pred_enet_by_year/pred_enet_2021.parquet
+  Updated partial training log: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/logs/training_log_enet_partial.csv
+
+=== Test year 2022 ===
+  Train: 1992-2011
+  Val:   2012-2021
+  Test:  2022
+  Elastic Net best alpha = 0.1, best l1_ratio = 0.75, validation MSE = 303.443024
+  Saved yearly predictions to: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/preds/pred_enet_by_year/pred_enet_2022.parquet
+  Updated partial training log: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/logs/training_log_enet_partial.csv
+
+=== Test year 2023 ===
+  Train: 1993-2012
+  Val:   2013-2022
+  Test:  2023
+  Elastic Net best alpha = 0.1, best l1_ratio = 0.75, validation MSE = 323.058852
+  Saved yearly predictions to: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/preds/pred_enet_by_year/pred_enet_2023.parquet
+  Updated partial training log: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/logs/training_log_enet_partial.csv
+
+Saved predictions to: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/preds/pred_enet_yearly.parquet
+Saved training log to: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/logs/training_log_enet_yearly.csv
+Prediction sample:
+        date  permno  ret_exc_lead1m       lme size_grp      pred  test_year model
+0 1995-01-31   10001       -3.019268  17.23600    micro  1.374045       1995  enet
+1 1995-02-28   10001        0.224281  16.78425    micro  1.403577       1995  enet
+2 1995-03-31   10001       -0.445000  16.83000    micro  0.257382       1995  enet
+3 1995-04-30   10001        4.464500  16.83000    micro  2.409351       1995  enet
+4 1995-05-31   10001        5.560346  17.67150    micro  1.325869       1995  enet
+
+======================================================================
+Selected model: rf_gpu
+======================================================================
+
+=== Test year 1995 ===
+  Train: 1965-1984
+  Val:   1985-1994
+  Test:  1995
+/storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/model_rf_gpu.py:73: FutureWarning: The default value of 'max_depth' will change from 16 to None (unlimited depth) in release 26.08. To suppress this warning, set 'max_depth' explicitly.
+  model.fit(X_train, y_train)
+  GPU Random Forest best params = {'n_estimators': 300, 'max_features': 'sqrt', 'min_samples_leaf': 100}, validation MSE = 218.944717
+/storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/model_rf_gpu.py:87: FutureWarning: The default value of 'max_depth' will change from 16 to None (unlimited depth) in release 26.08. To suppress this warning, set 'max_depth' explicitly.
+  final_model.fit(X_tv, y_tv)
+  Saved yearly predictions to: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/preds/pred_rf_gpu_by_year/pred_rf_gpu_1995.parquet
+  Updated partial training log: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/logs/training_log_rf_gpu_partial.csv
+
+=== Test year 1996 ===
+  Train: 1966-1985
+  Val:   1986-1995
+  Test:  1996
+/storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/model_rf_gpu.py:73: FutureWarning: The default value of 'max_depth' will change from 16 to None (unlimited depth) in release 26.08. To suppress this warning, set 'max_depth' explicitly.
+  model.fit(X_train, y_train)
+  GPU Random Forest best params = {'n_estimators': 200, 'max_features': 'sqrt', 'min_samples_leaf': 50}, validation MSE = 224.076309
+/storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/model_rf_gpu.py:87: FutureWarning: The default value of 'max_depth' will change from 16 to None (unlimited depth) in release 26.08. To suppress this warning, set 'max_depth' explicitly.
+  final_model.fit(X_tv, y_tv)
+  Saved yearly predictions to: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/preds/pred_rf_gpu_by_year/pred_rf_gpu_1996.parquet
+  Updated partial training log: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/logs/training_log_rf_gpu_partial.csv
+
+=== Test year 1997 ===
+  Train: 1967-1986
+  Val:   1987-1996
+  Test:  1997
+/storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/model_rf_gpu.py:73: FutureWarning: The default value of 'max_depth' will change from 16 to None (unlimited depth) in release 26.08. To suppress this warning, set 'max_depth' explicitly.
+  model.fit(X_train, y_train)
+  GPU Random Forest best params = {'n_estimators': 200, 'max_features': 0.33, 'min_samples_leaf': 50}, validation MSE = 229.776688
+/storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/model_rf_gpu.py:87: FutureWarning: The default value of 'max_depth' will change from 16 to None (unlimited depth) in release 26.08. To suppress this warning, set 'max_depth' explicitly.
+  final_model.fit(X_tv, y_tv)
+  Saved yearly predictions to: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/preds/pred_rf_gpu_by_year/pred_rf_gpu_1997.parquet
+  Updated partial training log: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/logs/training_log_rf_gpu_partial.csv
+
+=== Test year 1998 ===
+  Train: 1968-1987
+  Val:   1988-1997
+  Test:  1998
+/storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/model_rf_gpu.py:73: FutureWarning: The default value of 'max_depth' will change from 16 to None (unlimited depth) in release 26.08. To suppress this warning, set 'max_depth' explicitly.
+  model.fit(X_train, y_train)
+  GPU Random Forest best params = {'n_estimators': 200, 'max_features': 0.33, 'min_samples_leaf': 50}, validation MSE = 228.143219
+/storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/model_rf_gpu.py:87: FutureWarning: The default value of 'max_depth' will change from 16 to None (unlimited depth) in release 26.08. To suppress this warning, set 'max_depth' explicitly.
+  final_model.fit(X_tv, y_tv)
+  Saved yearly predictions to: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/preds/pred_rf_gpu_by_year/pred_rf_gpu_1998.parquet
+  Updated partial training log: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/logs/training_log_rf_gpu_partial.csv
+
+=== Test year 1999 ===
+  Train: 1969-1988
+  Val:   1989-1998
+  Test:  1999
+/storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/model_rf_gpu.py:73: FutureWarning: The default value of 'max_depth' will change from 16 to None (unlimited depth) in release 26.08. To suppress this warning, set 'max_depth' explicitly.
+  model.fit(X_train, y_train)
+  GPU Random Forest best params = {'n_estimators': 200, 'max_features': 0.33, 'min_samples_leaf': 50}, validation MSE = 255.998672
+/storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/model_rf_gpu.py:87: FutureWarning: The default value of 'max_depth' will change from 16 to None (unlimited depth) in release 26.08. To suppress this warning, set 'max_depth' explicitly.
+  final_model.fit(X_tv, y_tv)
+  Saved yearly predictions to: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/preds/pred_rf_gpu_by_year/pred_rf_gpu_1999.parquet
+  Updated partial training log: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/logs/training_log_rf_gpu_partial.csv
+
+=== Test year 2000 ===
+  Train: 1970-1989
+  Val:   1990-1999
+  Test:  2000
+/storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/model_rf_gpu.py:73: FutureWarning: The default value of 'max_depth' will change from 16 to None (unlimited depth) in release 26.08. To suppress this warning, set 'max_depth' explicitly.
+  model.fit(X_train, y_train)
+  GPU Random Forest best params = {'n_estimators': 200, 'max_features': 0.33, 'min_samples_leaf': 50}, validation MSE = 292.657806
+/storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/model_rf_gpu.py:87: FutureWarning: The default value of 'max_depth' will change from 16 to None (unlimited depth) in release 26.08. To suppress this warning, set 'max_depth' explicitly.
+  final_model.fit(X_tv, y_tv)
+  Saved yearly predictions to: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/preds/pred_rf_gpu_by_year/pred_rf_gpu_2000.parquet
+  Updated partial training log: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/logs/training_log_rf_gpu_partial.csv
+
+=== Test year 2001 ===
+  Train: 1971-1990
+  Val:   1991-2000
+  Test:  2001
+/storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/model_rf_gpu.py:73: FutureWarning: The default value of 'max_depth' will change from 16 to None (unlimited depth) in release 26.08. To suppress this warning, set 'max_depth' explicitly.
+  model.fit(X_train, y_train)
+  GPU Random Forest best params = {'n_estimators': 200, 'max_features': 0.33, 'min_samples_leaf': 50}, validation MSE = 339.173126
+/storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/model_rf_gpu.py:87: FutureWarning: The default value of 'max_depth' will change from 16 to None (unlimited depth) in release 26.08. To suppress this warning, set 'max_depth' explicitly.
+  final_model.fit(X_tv, y_tv)
+  Saved yearly predictions to: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/preds/pred_rf_gpu_by_year/pred_rf_gpu_2001.parquet
+  Updated partial training log: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/logs/training_log_rf_gpu_partial.csv
+
+=== Test year 2002 ===
+  Train: 1972-1991
+  Val:   1992-2001
+  Test:  2002
+/storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/model_rf_gpu.py:73: FutureWarning: The default value of 'max_depth' will change from 16 to None (unlimited depth) in release 26.08. To suppress this warning, set 'max_depth' explicitly.
+  model.fit(X_train, y_train)
+  GPU Random Forest best params = {'n_estimators': 200, 'max_features': 'sqrt', 'min_samples_leaf': 50}, validation MSE = 348.989807
+/storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/model_rf_gpu.py:87: FutureWarning: The default value of 'max_depth' will change from 16 to None (unlimited depth) in release 26.08. To suppress this warning, set 'max_depth' explicitly.
+  final_model.fit(X_tv, y_tv)
+  Saved yearly predictions to: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/preds/pred_rf_gpu_by_year/pred_rf_gpu_2002.parquet
+  Updated partial training log: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/logs/training_log_rf_gpu_partial.csv
+
+=== Test year 2003 ===
+  Train: 1973-1992
+  Val:   1993-2002
+  Test:  2003
+/storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/model_rf_gpu.py:73: FutureWarning: The default value of 'max_depth' will change from 16 to None (unlimited depth) in release 26.08. To suppress this warning, set 'max_depth' explicitly.
+  model.fit(X_train, y_train)
+  GPU Random Forest best params = {'n_estimators': 300, 'max_features': 'sqrt', 'min_samples_leaf': 100}, validation MSE = 356.509949
+/storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/model_rf_gpu.py:87: FutureWarning: The default value of 'max_depth' will change from 16 to None (unlimited depth) in release 26.08. To suppress this warning, set 'max_depth' explicitly.
+  final_model.fit(X_tv, y_tv)
+  Saved yearly predictions to: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/preds/pred_rf_gpu_by_year/pred_rf_gpu_2003.parquet
+  Updated partial training log: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/logs/training_log_rf_gpu_partial.csv
+
+=== Test year 2004 ===
+  Train: 1974-1993
+  Val:   1994-2003
+  Test:  2004
+/storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/model_rf_gpu.py:73: FutureWarning: The default value of 'max_depth' will change from 16 to None (unlimited depth) in release 26.08. To suppress this warning, set 'max_depth' explicitly.
+  model.fit(X_train, y_train)
+  GPU Random Forest best params = {'n_estimators': 200, 'max_features': 0.33, 'min_samples_leaf': 50}, validation MSE = 364.153748
+/storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/model_rf_gpu.py:87: FutureWarning: The default value of 'max_depth' will change from 16 to None (unlimited depth) in release 26.08. To suppress this warning, set 'max_depth' explicitly.
+  final_model.fit(X_tv, y_tv)
+  Saved yearly predictions to: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/preds/pred_rf_gpu_by_year/pred_rf_gpu_2004.parquet
+  Updated partial training log: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/logs/training_log_rf_gpu_partial.csv
+
+=== Test year 2005 ===
+  Train: 1975-1994
+  Val:   1995-2004
+  Test:  2005
+/storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/model_rf_gpu.py:73: FutureWarning: The default value of 'max_depth' will change from 16 to None (unlimited depth) in release 26.08. To suppress this warning, set 'max_depth' explicitly.
+  model.fit(X_train, y_train)
+  GPU Random Forest best params = {'n_estimators': 200, 'max_features': 0.33, 'min_samples_leaf': 50}, validation MSE = 370.433899
+/storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/model_rf_gpu.py:87: FutureWarning: The default value of 'max_depth' will change from 16 to None (unlimited depth) in release 26.08. To suppress this warning, set 'max_depth' explicitly.
+  final_model.fit(X_tv, y_tv)
+  Saved yearly predictions to: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/preds/pred_rf_gpu_by_year/pred_rf_gpu_2005.parquet
+  Updated partial training log: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/logs/training_log_rf_gpu_partial.csv
+
+=== Test year 2006 ===
+  Train: 1976-1995
+  Val:   1996-2005
+  Test:  2006
+/storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/model_rf_gpu.py:73: FutureWarning: The default value of 'max_depth' will change from 16 to None (unlimited depth) in release 26.08. To suppress this warning, set 'max_depth' explicitly.
+  model.fit(X_train, y_train)
+  GPU Random Forest best params = {'n_estimators': 200, 'max_features': 0.33, 'min_samples_leaf': 50}, validation MSE = 370.173492
+/storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/model_rf_gpu.py:87: FutureWarning: The default value of 'max_depth' will change from 16 to None (unlimited depth) in release 26.08. To suppress this warning, set 'max_depth' explicitly.
+  final_model.fit(X_tv, y_tv)
+  Saved yearly predictions to: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/preds/pred_rf_gpu_by_year/pred_rf_gpu_2006.parquet
+  Updated partial training log: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/logs/training_log_rf_gpu_partial.csv
+
+=== Test year 2007 ===
+  Train: 1977-1996
+  Val:   1997-2006
+  Test:  2007
+/storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/model_rf_gpu.py:73: FutureWarning: The default value of 'max_depth' will change from 16 to None (unlimited depth) in release 26.08. To suppress this warning, set 'max_depth' explicitly.
+  model.fit(X_train, y_train)
+  GPU Random Forest best params = {'n_estimators': 300, 'max_features': 'sqrt', 'min_samples_leaf': 100}, validation MSE = 365.123047
+/storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/model_rf_gpu.py:87: FutureWarning: The default value of 'max_depth' will change from 16 to None (unlimited depth) in release 26.08. To suppress this warning, set 'max_depth' explicitly.
+  final_model.fit(X_tv, y_tv)
+  Saved yearly predictions to: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/preds/pred_rf_gpu_by_year/pred_rf_gpu_2007.parquet
+  Updated partial training log: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/logs/training_log_rf_gpu_partial.csv
+
+=== Test year 2008 ===
+  Train: 1978-1997
+  Val:   1998-2007
+  Test:  2008
+/storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/model_rf_gpu.py:73: FutureWarning: The default value of 'max_depth' will change from 16 to None (unlimited depth) in release 26.08. To suppress this warning, set 'max_depth' explicitly.
+  model.fit(X_train, y_train)
+  GPU Random Forest best params = {'n_estimators': 300, 'max_features': 'sqrt', 'min_samples_leaf': 100}, validation MSE = 364.097900
+/storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/model_rf_gpu.py:87: FutureWarning: The default value of 'max_depth' will change from 16 to None (unlimited depth) in release 26.08. To suppress this warning, set 'max_depth' explicitly.
+  final_model.fit(X_tv, y_tv)
+  Saved yearly predictions to: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/preds/pred_rf_gpu_by_year/pred_rf_gpu_2008.parquet
+  Updated partial training log: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/logs/training_log_rf_gpu_partial.csv
+
+=== Test year 2009 ===
+  Train: 1979-1998
+  Val:   1999-2008
+  Test:  2009
+/storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/model_rf_gpu.py:73: FutureWarning: The default value of 'max_depth' will change from 16 to None (unlimited depth) in release 26.08. To suppress this warning, set 'max_depth' explicitly.
+  model.fit(X_train, y_train)
+  GPU Random Forest best params = {'n_estimators': 200, 'max_features': 0.33, 'min_samples_leaf': 50}, validation MSE = 355.464996
+/storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/model_rf_gpu.py:87: FutureWarning: The default value of 'max_depth' will change from 16 to None (unlimited depth) in release 26.08. To suppress this warning, set 'max_depth' explicitly.
+  final_model.fit(X_tv, y_tv)
+  Saved yearly predictions to: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/preds/pred_rf_gpu_by_year/pred_rf_gpu_2009.parquet
+  Updated partial training log: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/logs/training_log_rf_gpu_partial.csv
+
+=== Test year 2010 ===
+  Train: 1980-1999
+  Val:   2000-2009
+  Test:  2010
+/storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/model_rf_gpu.py:73: FutureWarning: The default value of 'max_depth' will change from 16 to None (unlimited depth) in release 26.08. To suppress this warning, set 'max_depth' explicitly.
+  model.fit(X_train, y_train)
+  GPU Random Forest best params = {'n_estimators': 300, 'max_features': 'sqrt', 'min_samples_leaf': 100}, validation MSE = 340.389679
+/storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/model_rf_gpu.py:87: FutureWarning: The default value of 'max_depth' will change from 16 to None (unlimited depth) in release 26.08. To suppress this warning, set 'max_depth' explicitly.
+  final_model.fit(X_tv, y_tv)
+  Saved yearly predictions to: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/preds/pred_rf_gpu_by_year/pred_rf_gpu_2010.parquet
+  Updated partial training log: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/logs/training_log_rf_gpu_partial.csv
+
+=== Test year 2011 ===
+  Train: 1981-2000
+  Val:   2001-2010
+  Test:  2011
+/storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/model_rf_gpu.py:73: FutureWarning: The default value of 'max_depth' will change from 16 to None (unlimited depth) in release 26.08. To suppress this warning, set 'max_depth' explicitly.
+  model.fit(X_train, y_train)
+  GPU Random Forest best params = {'n_estimators': 300, 'max_features': 'sqrt', 'min_samples_leaf': 100}, validation MSE = 276.427704
+/storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/model_rf_gpu.py:87: FutureWarning: The default value of 'max_depth' will change from 16 to None (unlimited depth) in release 26.08. To suppress this warning, set 'max_depth' explicitly.
+  final_model.fit(X_tv, y_tv)
+  Saved yearly predictions to: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/preds/pred_rf_gpu_by_year/pred_rf_gpu_2011.parquet
+  Updated partial training log: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/logs/training_log_rf_gpu_partial.csv
+
+=== Test year 2012 ===
+  Train: 1982-2001
+  Val:   2002-2011
+  Test:  2012
+/storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/model_rf_gpu.py:73: FutureWarning: The default value of 'max_depth' will change from 16 to None (unlimited depth) in release 26.08. To suppress this warning, set 'max_depth' explicitly.
+  model.fit(X_train, y_train)
+  GPU Random Forest best params = {'n_estimators': 300, 'max_features': 'sqrt', 'min_samples_leaf': 100}, validation MSE = 252.324905
+/storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/model_rf_gpu.py:87: FutureWarning: The default value of 'max_depth' will change from 16 to None (unlimited depth) in release 26.08. To suppress this warning, set 'max_depth' explicitly.
+  final_model.fit(X_tv, y_tv)
+  Saved yearly predictions to: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/preds/pred_rf_gpu_by_year/pred_rf_gpu_2012.parquet
+  Updated partial training log: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/logs/training_log_rf_gpu_partial.csv
+
+=== Test year 2013 ===
+  Train: 1983-2002
+  Val:   2003-2012
+  Test:  2013
+/storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/model_rf_gpu.py:73: FutureWarning: The default value of 'max_depth' will change from 16 to None (unlimited depth) in release 26.08. To suppress this warning, set 'max_depth' explicitly.
+  model.fit(X_train, y_train)
+  GPU Random Forest best params = {'n_estimators': 300, 'max_features': 'sqrt', 'min_samples_leaf': 100}, validation MSE = 237.685303
+/storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/model_rf_gpu.py:87: FutureWarning: The default value of 'max_depth' will change from 16 to None (unlimited depth) in release 26.08. To suppress this warning, set 'max_depth' explicitly.
+  final_model.fit(X_tv, y_tv)
+  Saved yearly predictions to: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/preds/pred_rf_gpu_by_year/pred_rf_gpu_2013.parquet
+  Updated partial training log: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/logs/training_log_rf_gpu_partial.csv
+
+=== Test year 2014 ===
+  Train: 1984-2003
+  Val:   2004-2013
+  Test:  2014
+/storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/model_rf_gpu.py:73: FutureWarning: The default value of 'max_depth' will change from 16 to None (unlimited depth) in release 26.08. To suppress this warning, set 'max_depth' explicitly.
+  model.fit(X_train, y_train)
+  GPU Random Forest best params = {'n_estimators': 300, 'max_features': 'sqrt', 'min_samples_leaf': 100}, validation MSE = 226.460602
+/storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/model_rf_gpu.py:87: FutureWarning: The default value of 'max_depth' will change from 16 to None (unlimited depth) in release 26.08. To suppress this warning, set 'max_depth' explicitly.
+  final_model.fit(X_tv, y_tv)
+  Saved yearly predictions to: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/preds/pred_rf_gpu_by_year/pred_rf_gpu_2014.parquet
+  Updated partial training log: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/logs/training_log_rf_gpu_partial.csv
+
+=== Test year 2015 ===
+  Train: 1985-2004
+  Val:   2005-2014
+  Test:  2015
+/storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/model_rf_gpu.py:73: FutureWarning: The default value of 'max_depth' will change from 16 to None (unlimited depth) in release 26.08. To suppress this warning, set 'max_depth' explicitly.
+  model.fit(X_train, y_train)
+  GPU Random Forest best params = {'n_estimators': 300, 'max_features': 'sqrt', 'min_samples_leaf': 100}, validation MSE = 224.011108
+/storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/model_rf_gpu.py:87: FutureWarning: The default value of 'max_depth' will change from 16 to None (unlimited depth) in release 26.08. To suppress this warning, set 'max_depth' explicitly.
+  final_model.fit(X_tv, y_tv)
+  Saved yearly predictions to: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/preds/pred_rf_gpu_by_year/pred_rf_gpu_2015.parquet
+  Updated partial training log: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/logs/training_log_rf_gpu_partial.csv
+
+=== Test year 2016 ===
+  Train: 1986-2005
+  Val:   2006-2015
+  Test:  2016
+/storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/model_rf_gpu.py:73: FutureWarning: The default value of 'max_depth' will change from 16 to None (unlimited depth) in release 26.08. To suppress this warning, set 'max_depth' explicitly.
+  model.fit(X_train, y_train)
+  GPU Random Forest best params = {'n_estimators': 300, 'max_features': 'sqrt', 'min_samples_leaf': 100}, validation MSE = 236.176727
+/storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/model_rf_gpu.py:87: FutureWarning: The default value of 'max_depth' will change from 16 to None (unlimited depth) in release 26.08. To suppress this warning, set 'max_depth' explicitly.
+  final_model.fit(X_tv, y_tv)
+  Saved yearly predictions to: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/preds/pred_rf_gpu_by_year/pred_rf_gpu_2016.parquet
+  Updated partial training log: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/logs/training_log_rf_gpu_partial.csv
+
+=== Test year 2017 ===
+  Train: 1987-2006
+  Val:   2007-2016
+  Test:  2017
+/storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/model_rf_gpu.py:73: FutureWarning: The default value of 'max_depth' will change from 16 to None (unlimited depth) in release 26.08. To suppress this warning, set 'max_depth' explicitly.
+  model.fit(X_train, y_train)
+  GPU Random Forest best params = {'n_estimators': 300, 'max_features': 'sqrt', 'min_samples_leaf': 100}, validation MSE = 247.600616
+/storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/model_rf_gpu.py:87: FutureWarning: The default value of 'max_depth' will change from 16 to None (unlimited depth) in release 26.08. To suppress this warning, set 'max_depth' explicitly.
+  final_model.fit(X_tv, y_tv)
+  Saved yearly predictions to: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/preds/pred_rf_gpu_by_year/pred_rf_gpu_2017.parquet
+  Updated partial training log: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/logs/training_log_rf_gpu_partial.csv
+
+=== Test year 2018 ===
+  Train: 1988-2007
+  Val:   2008-2017
+  Test:  2018
+/storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/model_rf_gpu.py:73: FutureWarning: The default value of 'max_depth' will change from 16 to None (unlimited depth) in release 26.08. To suppress this warning, set 'max_depth' explicitly.
+  model.fit(X_train, y_train)
+  GPU Random Forest best params = {'n_estimators': 200, 'max_features': 'sqrt', 'min_samples_leaf': 50}, validation MSE = 251.504883
+/storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/model_rf_gpu.py:87: FutureWarning: The default value of 'max_depth' will change from 16 to None (unlimited depth) in release 26.08. To suppress this warning, set 'max_depth' explicitly.
+  final_model.fit(X_tv, y_tv)
+  Saved yearly predictions to: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/preds/pred_rf_gpu_by_year/pred_rf_gpu_2018.parquet
+  Updated partial training log: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/logs/training_log_rf_gpu_partial.csv
+
+=== Test year 2019 ===
+  Train: 1989-2008
+  Val:   2009-2018
+  Test:  2019
+/storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/model_rf_gpu.py:73: FutureWarning: The default value of 'max_depth' will change from 16 to None (unlimited depth) in release 26.08. To suppress this warning, set 'max_depth' explicitly.
+  model.fit(X_train, y_train)
+  GPU Random Forest best params = {'n_estimators': 300, 'max_features': 'sqrt', 'min_samples_leaf': 100}, validation MSE = 249.909454
+/storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/model_rf_gpu.py:87: FutureWarning: The default value of 'max_depth' will change from 16 to None (unlimited depth) in release 26.08. To suppress this warning, set 'max_depth' explicitly.
+  final_model.fit(X_tv, y_tv)
+  Saved yearly predictions to: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/preds/pred_rf_gpu_by_year/pred_rf_gpu_2019.parquet
+  Updated partial training log: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/logs/training_log_rf_gpu_partial.csv
+
+=== Test year 2020 ===
+  Train: 1990-2009
+  Val:   2010-2019
+  Test:  2020
+/storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/model_rf_gpu.py:73: FutureWarning: The default value of 'max_depth' will change from 16 to None (unlimited depth) in release 26.08. To suppress this warning, set 'max_depth' explicitly.
+  model.fit(X_train, y_train)
+  GPU Random Forest best params = {'n_estimators': 300, 'max_features': 'sqrt', 'min_samples_leaf': 100}, validation MSE = 226.844254
+/storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/model_rf_gpu.py:87: FutureWarning: The default value of 'max_depth' will change from 16 to None (unlimited depth) in release 26.08. To suppress this warning, set 'max_depth' explicitly.
+  final_model.fit(X_tv, y_tv)
+  Saved yearly predictions to: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/preds/pred_rf_gpu_by_year/pred_rf_gpu_2020.parquet
+  Updated partial training log: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/logs/training_log_rf_gpu_partial.csv
+
+=== Test year 2021 ===
+  Train: 1991-2010
+  Val:   2011-2020
+  Test:  2021
+/storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/model_rf_gpu.py:73: FutureWarning: The default value of 'max_depth' will change from 16 to None (unlimited depth) in release 26.08. To suppress this warning, set 'max_depth' explicitly.
+  model.fit(X_train, y_train)
+  GPU Random Forest best params = {'n_estimators': 300, 'max_features': 'sqrt', 'min_samples_leaf': 100}, validation MSE = 288.423462
+/storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/model_rf_gpu.py:87: FutureWarning: The default value of 'max_depth' will change from 16 to None (unlimited depth) in release 26.08. To suppress this warning, set 'max_depth' explicitly.
+  final_model.fit(X_tv, y_tv)
+  Saved yearly predictions to: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/preds/pred_rf_gpu_by_year/pred_rf_gpu_2021.parquet
+  Updated partial training log: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/logs/training_log_rf_gpu_partial.csv
+
+=== Test year 2022 ===
+  Train: 1992-2011
+  Val:   2012-2021
+  Test:  2022
+/storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/model_rf_gpu.py:73: FutureWarning: The default value of 'max_depth' will change from 16 to None (unlimited depth) in release 26.08. To suppress this warning, set 'max_depth' explicitly.
+  model.fit(X_train, y_train)
+  GPU Random Forest best params = {'n_estimators': 300, 'max_features': 'sqrt', 'min_samples_leaf': 100}, validation MSE = 303.040680
+/storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/model_rf_gpu.py:87: FutureWarning: The default value of 'max_depth' will change from 16 to None (unlimited depth) in release 26.08. To suppress this warning, set 'max_depth' explicitly.
+  final_model.fit(X_tv, y_tv)
+  Saved yearly predictions to: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/preds/pred_rf_gpu_by_year/pred_rf_gpu_2022.parquet
+  Updated partial training log: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/logs/training_log_rf_gpu_partial.csv
+
+=== Test year 2023 ===
+  Train: 1993-2012
+  Val:   2013-2022
+  Test:  2023
+/storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/model_rf_gpu.py:73: FutureWarning: The default value of 'max_depth' will change from 16 to None (unlimited depth) in release 26.08. To suppress this warning, set 'max_depth' explicitly.
+  model.fit(X_train, y_train)
+  GPU Random Forest best params = {'n_estimators': 200, 'max_features': 'sqrt', 'min_samples_leaf': 50}, validation MSE = 322.338074
+/storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/model_rf_gpu.py:87: FutureWarning: The default value of 'max_depth' will change from 16 to None (unlimited depth) in release 26.08. To suppress this warning, set 'max_depth' explicitly.
+  final_model.fit(X_tv, y_tv)
+  Saved yearly predictions to: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/preds/pred_rf_gpu_by_year/pred_rf_gpu_2023.parquet
+  Updated partial training log: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/logs/training_log_rf_gpu_partial.csv
+
+Saved predictions to: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/preds/pred_rf_gpu_yearly.parquet
+Saved training log to: /storage/v-jinpewang/az_workspace/zhanglin/reproduction/ssc/logs/training_log_rf_gpu_yearly.csv
+Prediction sample:
+        date  permno  ret_exc_lead1m  ...      pred test_year   model
+0 1995-01-31   10001       -3.019268  ...  0.908111      1995  rf_gpu
+1 1995-02-28   10001        0.224281  ...  0.773778      1995  rf_gpu
+2 1995-03-31   10001       -0.445000  ...  0.188776      1995  rf_gpu
+3 1995-04-30   10001        4.464500  ...  1.252319      1995  rf_gpu
+4 1995-05-31   10001        5.560346  ...  0.977684      1995  rf_gpu
+
+[5 rows x 8 columns]
