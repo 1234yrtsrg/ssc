@@ -291,23 +291,42 @@ def main():
 
         df_win_sub = df_win.set_index([ID_COL, DATE_COL])[features_to_replace]
 
+        duplicated_keys = int(df_win_sub.index.duplicated().sum())
+
+        if duplicated_keys > 0:
+
+            raise ValueError(
+
+                f"winsorize数据存在 {duplicated_keys} 个重复的股票ID-日期键，"
+
+                f"请先检查 panel_winsorize_only.parquet。"
+
+            )
+
+        missing_keys = df.index.difference(df_win_sub.index)
+
+        if len(missing_keys) > 0:
+
+            raise ValueError(
+
+                f"winsorize数据比rank数据少 {len(missing_keys)} 行股票ID-日期记录，"
+
+                f"请检查两份数据源是否来自同一份原始样本。"
+
+            )
+
         # 核心替换：把特定列覆盖成原始未Rank的值
 
         df[features_to_replace] = df_win_sub
 
-        # ✅ Bug1修复：替换后主动校验，防止数据对齐失败被静默填0掩盖
+        # rank前的原始特征允许存在NaN；后面的统一缺失值防线会填0。
+        # 这里仅提示数量，不再把原始缺失误判为行对齐失败。
 
         nan_after = df[features_to_replace].isna().sum().sum()
 
         if nan_after > 0:
 
-            raise ValueError(
-
-                f"消融替换后发现 {nan_after} 个NaN，winsorize数据与rank数据行对齐失败，"
-
-                f"请检查两份数据源的股票ID和日期是否完全一致！"
-
-            )
+            print(f" 警告：替换后的原始Winsorize特征中有 {nan_after} 个NaN，将在后续统一填充为0.0。")
 
         df = df.reset_index()
 
